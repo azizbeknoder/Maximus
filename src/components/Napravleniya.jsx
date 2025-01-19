@@ -43,7 +43,7 @@ export default function Napravleniya() {
       },
     ];
   return (
-    <div className="2xl:px-40 bg-[url('/all/napravleniya/osmon.png')] sm:bg-[url('/all/napravleniya/osmonSM.png')] bg-no-repeat bg-cover">
+    <div className=" bg-[url('/all/napravleniya/osmon.png')] sm:bg-[url('/all/napravleniya/osmonSM.png')] md:bg-[url('/all/napravleniya/osmonMD.png')] xl:bg-[url('/all/napravleniya/osmonXL.png')] bg-no-repeat bg-cover 2xl:px-40">
       <h1
         className={`${philosopher.className} text-xl sm:text-2xl md:text-3xl xl:text-4xl text-center mt-[100px] mb-3`}
       >
@@ -68,24 +68,27 @@ export default function Napravleniya() {
           );
         })}
       </ul>
-      
-        <picture className='flex justify-between items-center'>
-          <source
-            media="(min-width: 1280px)"
-            srcSet="/assets/shared/desktop/image-best-gear.jpg"
-          />
 
-          <source
-            media="(min-width: 470px)"
-            srcSet="/all/napravleniya/otQizSM.png"
-          />
-          <img
-            src="/all/napravleniya/otQiz.png"
-            className=" bg-cover bg-no-repeat w-full relative -top-20 sm:-top-0 "
-            alt=""
-          />
-        </picture>
-      
+      <picture className="flex justify-between items-center">
+        <source
+          media="(min-width: 1280px)"
+          srcSet="/all/napravleniya/otQizXL.png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcSet="/all/napravleniya/otQizMD.png"
+        />
+
+        <source
+          media="(min-width: 470px)"
+          srcSet="/all/napravleniya/otQizSM.png"
+        />
+        <img
+          src="/all/napravleniya/otQiz.png"
+          className=" bg-cover bg-no-repeat w-full relative -top-20 sm:-top-0 md:-top-0 xl:-top-0"
+          alt=""
+        />
+      </picture>
     </div>
   );
 }
